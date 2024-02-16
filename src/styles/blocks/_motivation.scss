@@ -1,0 +1,24 @@
+.motivation {
+  
+  // .motivation-list
+
+  &-list {
+  }
+
+  // .motivation-item
+
+  &-item {
+    &:nth-child(even) {
+      background-color: var(--color-dark-alt);
+    }    
+  }
+  
+  &-item:nth-child(even) .motivation-card {
+    flex-direction: row-reverse;
+    
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
