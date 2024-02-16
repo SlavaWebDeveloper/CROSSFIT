@@ -56,22 +56,22 @@
 
   &__pagination {
 
-    // .banner__pagination_list
+    // .banner__pagination-list
 
-    &_list {
+    &-list {
       display: flex;
       justify-content: center;
     }
 
-    // .banner__pagination_item
+    // .banner__pagination-item
 
-    &_item {
+    &-item {
       display: flex;
     }
 
-    // .banner__pagination_button
+    // .banner__pagination-button
 
-    &_button {
+    &-button {
       height: auto;
       padding: 7px;
       background-color: transparent;
