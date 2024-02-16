@@ -19,7 +19,6 @@ $mobile: 767px;
   }
 }
 
-
 @mixin tablet-above {
   @media (min-width: $tablet-above) {
     @content;
@@ -31,7 +30,6 @@ $mobile: 767px;
     @content;
   }
 }
-
 
 @mixin mobile-above {
   @media (min-width: $mobile-above) {
