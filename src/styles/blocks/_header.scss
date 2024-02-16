@@ -102,6 +102,10 @@
     @include hover {
       background-color: var(--color-light-gray);
     }
+    
+    @include mobile {
+      padding-inline: 18px;
+    }
   } 
   
   // .header-burger-button
