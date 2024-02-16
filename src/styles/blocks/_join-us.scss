@@ -1,0 +1,105 @@
+.join-us {
+
+  // .join-us-video
+
+  &-video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+
+    // .join-us-video-wrapper
+
+    &-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background: url('./images/join-us-bg.jpg') center/cover no-repeat var(--color-dark-alt);
+      padding: 150px 30px;
+    }
+    
+    // .join-us-video-play-button
+    
+    &-play-button {
+      @include abs-center;
+      @include square(200px);
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 4px;
+
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-light);
+
+      background-color: transparent;
+      border: var(--border);
+      border-radius: 50%;      
+      transition-duration: var(--transition-duration);
+
+      &::after {
+        @include square(26px);
+
+        content: '';
+        background: url('./images/icons/bold-arrow-top-right.svg') center/contain no-repeat; 
+      }
+
+      @include hover {
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+
+        &::after {
+          filter: invert(1);
+        }
+      }
+
+      @include tablet {
+        width: 140px;
+      }
+    }
+  }
+
+  // .join-us-body  
+
+  &-body {
+    padding-bottom: 150px;
+
+    @include tablet {
+      padding-bottom: 80px;
+    }
+  }
+  
+  // .join-us-title   
+  
+  &-title {
+    @include fluid-text(180, 64);
+
+    position: relative;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: -0.4em;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 0.7em;
+      aspect-ratio: 1;
+      margin-left: 0.14em;
+      background: url('./images/icons/bold-arrow-down-right.svg') center/contain no-repeat; 
+      scale: 1 -1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 130px;
+
+      @include tablet {
+        margin-bottom: 80px;
+      }
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
