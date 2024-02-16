@@ -19,8 +19,4 @@
   @include mobile {
     padding-inline: 18px;
   }
-
-  @include hover {
-    background-color: var(--color-light-gray);
-  }
 }
