@@ -1,0 +1,36 @@
+.backdrop-title {
+  position: relative;
+  z-index: 2;
+
+  &-center {
+    &::after {
+      top: -0.55em;
+      left: 50%;
+      translate: 50% 0;
+    }
+    
+  }
+
+  &::before {
+    @include square(26px);
+
+    position: absolute;
+    right: calc(100% + 8px);
+    content: '';
+    display: block;
+    background: url('./../images/icons/plus.svg') center/contain no-repeat;
+  }
+
+  &::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: -1;
+    top: -0.45em;
+    left: -0.6em;
+    font-size: 2.8em;
+    font-family: var(--font-family-accent);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-light-gray);
+    text-stroke: 1px var(--color-light-gray);
+  }
+}
