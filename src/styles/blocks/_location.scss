@@ -1,0 +1,58 @@
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  // .location-map-image
+  
+  &-map-image {
+    height: auto;  
+  }
+  
+  // .location-body
+  
+  &-body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 15px;  
+
+    @include mobile {
+      padding-block: 40px;
+    }
+  }
+  
+  // .location-title
+  
+  &-title {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+  
+  // .location-description
+  
+  &-description {
+    max-width: 490px;
+
+    &:not(:last-child) {
+      margin-bottom: 37px;
+      
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+  // .location-button
+  
+  &-button { 
+  
+  }
+}
