@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 20px;
+  min-height: var(--header-height);
   background-color: var(--color-dark-alt);
 
   @include tablet {
@@ -62,7 +63,7 @@
     &-link {
       display: inline-flex;
       align-items: center;
-      height: 90px;
+      height: var(--header-height);
       column-gap: 7px;
 
       color: var(--color-light);
@@ -97,7 +98,10 @@
 
   // .header-book-button
 
-  &-book-button {   
+  &-book-button {
+    @include hover {
+      background-color: var(--color-light-gray);
+    }
   } 
   
   // .header-burger-button
