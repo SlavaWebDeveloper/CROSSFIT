@@ -1,0 +1,153 @@
+.calculate {
+  background-color: var(--color-dark-alt);
+  padding-block: 146px;
+
+  @include tablet {
+    padding-block: 100px;
+  }
+
+  @include mobile {
+    padding-block: 60px;
+  }
+  
+  // .calculate-inner
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+
+    @include tablet {
+      column-gap: 20px;
+    }
+
+    @include mobile {
+      row-gap: 30px;
+      flex-direction: column;
+    }
+  }
+  
+  // .calculate-body
+
+  &-body {
+    flex-grow: 1;
+    max-width: 627px;
+  }
+  
+  // .calculate-title
+
+  &-title {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    
+    @include desktop {
+      &.backdrop-title::after {
+        left: -0.2em;
+      }
+    }
+  }
+  
+  // .calculate-description
+
+  &-description {
+    max-width: 385px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .calculate-input
+
+  &-input {
+  }
+
+  // .calculate-table
+
+  &-table-wrapper {
+    @include flex-center;
+
+    position: relative;
+    width: 100%;
+    max-width: 610px;
+
+    &::before {
+      @include abs-center;
+      @include square(100%);
+
+      content: '';
+      background-color: var(--color-dark);
+      border-radius: 50%;
+
+      @include mobile {
+        display: none;
+      }
+    }    
+  }
+  
+  // .calculate-table
+
+  &-table {
+    position: relative;
+    border-collapse: collapse;
+    
+    th {
+      padding-block: 20px;
+      text-align: left;
+      text-transform: uppercase;
+      color: var(--color-light);
+    }
+
+    td {
+      padding-block: 14px;
+    }
+
+    tfoot {
+      color: var(--color-light);
+
+      td {
+        padding-top: 33px;
+        padding-bottom: 0;
+
+        @include tablet {
+          padding-top: 10px;
+        }
+      }
+    }
+
+    :is(td, th) {
+      padding-right: 30px;
+
+      @include tablet {
+        padding-block: 10px;
+      }
+    }
+    
+    :is(td, th):not(:first-child) {
+      padding-left: 30px;
+    }
+
+    :is(td, th):not(:last-child) {
+      border-right: 1px solid var(--color-light-gray);
+    }
+
+    tbody td  {
+      border-top: 1px solid var(--color-light-gray);
+    }
+
+    tbody tr:last-child td:first-child {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: 1px;
+        background-color: var(--color-light-gray);
+      }
+    }
+  }
+}

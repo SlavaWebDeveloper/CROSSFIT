@@ -1,0 +1,26 @@
+.calculate-form {
+
+  // .calculate-form-body
+
+  &-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+
+    @include desktop {
+      grid-template-columns: 1fr;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  // .calculate-form-button
+
+  &-button {
+    @include desktop {
+      width: 100%;
+    }
+  }
+}
