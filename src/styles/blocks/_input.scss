@@ -20,4 +20,22 @@
     background-color: var(--color-light-gray);
     outline: none;
   }
+
+  &-wide {
+    grid-column: -1 / 1;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select.input:invalid {
+  color: var(--color-light-gray);        
 }
