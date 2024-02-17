@@ -1,0 +1,154 @@
+.footer {
+
+  --footerLogoWidth: 20.77%;
+
+  color: var(--color-light);
+
+  &__header,
+  &__body {
+    display: grid;
+    column-gap: 62px;
+  }
+
+  // .footer__header
+
+  &__header {
+    grid-template-columns: var(--footerLogoWidth) auto;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+   
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // .footer__body
+
+  &__body {
+    grid-template-columns: var(--footerLogoWidth) repeat(3, 1fr);
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+
+    // .footer__logo-image
+
+    &-image {
+      height: auto;
+    }
+  }
+
+  // .footer__main
+
+  &-main {
+    padding-top: 140px;
+    padding-bottom: 160px;
+    
+    @include desktop {
+      padding-top: 80px;
+      padding-bottom: 50px;
+    }
+
+    @include mobile {
+      padding-top: 50px;
+    }
+
+    // .footer__main-inner
+
+    &-inner {
+    }
+  }
+
+  // .footer-description
+  
+  &-description {
+    text-align: left;
+  }
+  
+  // .footer-column
+  
+  &-column {
+
+    // .footer-column
+  
+    &-title {
+      @include fluid-text(22, 18);
+
+      
+      &.has-arrow {
+        &::after {
+          content: '';
+          display: inline-block;
+          height: 0.74em;
+          aspect-ratio: 1;
+          margin-left: 0.5em;
+          background: url('./images/icons/bold-arrow-down-right.svg') center/contain no-repeat; 
+          scale: -1 1;
+        }    
+      }
+
+      &:not(:last-child){
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  // .footer-about
+  
+  &-about {
+  }
+  
+  // .footer-schedule
+  
+  &-schedule {
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+  
+  // .footer-address
+  
+  &-address {
+    font-style: normal;
+
+    &:not(:last-child){
+      margin-bottom: 35px;
+    }
+  }
+  
+  // .footer-extra
+  
+  &-extra {
+    padding-block: 15px;
+    background-color: var(--color-dark-alt);
+    
+    // .footer-extra-inner
+    
+    &-inner {
+    }
+  }
+    
+  // .footer-copyright
+  
+  &-copyright {
+    font-size: 14px;
+  }  
+}

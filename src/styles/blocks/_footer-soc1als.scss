@@ -1,0 +1,25 @@
+.footer-soc1als {
+
+  // .footer-list  
+  
+  &-list {
+    display: flex;
+    column-gap: 18px;
+  }
+  
+  // .footer-item  
+  
+  &-item {
+  }
+  
+  // .footer-link  
+  
+  &-link {
+    display: flex;
+    width: 23px;
+
+    @include hover {
+      color: var(--color-light-gray);
+    }
+  }
+}

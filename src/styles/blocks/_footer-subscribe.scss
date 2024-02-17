@@ -1,0 +1,35 @@
+.footer-subscribe {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  
+  // .footer-subscribe-input
+  
+  &-input {
+    padding-right: 70px;
+  }
+  
+  // .footer-subscribe-button
+  
+  &-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    background: url(images/icons/bold-arrow-top-right.svg) 50%/70% no-repeat;
+
+    @include hover {
+      background-color: var(--color-light-gray);
+    }
+  }
+}
