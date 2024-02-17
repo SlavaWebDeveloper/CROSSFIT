@@ -28,7 +28,7 @@ $mobile: 767.98px;
   }
 }
 
-@mixin desctop {
+@mixin desktop {
   @media (max-width: $desktop) {
     @content;
   }
